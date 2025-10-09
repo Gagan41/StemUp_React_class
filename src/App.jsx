@@ -1,17 +1,17 @@
 import "./App.css";
-import Hello from "./helloworld";
+//import Hello from "./helloworld";
+import FirstComponent from "./firstComponent";
+import Fruit from "./classOne";
+import Parent from "./propsChildren";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis vero
-        beatae corporis modi facilis omnis quibusdam distinctio a accusamus
-        nulla perspiciatis ullam sint, iure illum eos consequatur hic
-        dignissimos optio?
-      </p>
-      <Hello />
+      <FirstComponent name="Gagan" />
+      {/* <FirstComponent name="Singh" />
+      <FirstComponent name="Yadav" /> */}
+      <Fruit />
+      <Parent />
     </div>
   );
 }
