@@ -1,0 +1,21 @@
+.title {
+  color: #ffffff;
+  text-align: center;
+  text-shadow: #00ff88 2px 2px 4px;
+  font-weight: 700;
+  font-size: 2rem;
+  border: 5px solid #00ff88;
+  border-radius: 12px;
+  background-image: url("https://images.pexels.com/photos/884788/pexels-photo-884788.jpeg");
+  background-size: cover;
+  background-position: center;
+  margin: 20px auto;
+  padding: 30px 20px;
+  width: 100%;
+  height: 150px;
+  transition: transform 0.3s ease;
+}
+
+.title:hover {
+  transform: scale(1.05);
+}
