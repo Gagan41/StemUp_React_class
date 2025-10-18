@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NavLink1 from "./navLink";
 
 function Index() {
   return (
@@ -9,6 +10,7 @@ function Index() {
         <Link to="/home">Home Page ||</Link>
         <Link to="/about">About Us ||</Link>
         <Link to="/contact">Contact Us</Link>
+        <NavLink1 />
       </nav>
     </div>
   );
