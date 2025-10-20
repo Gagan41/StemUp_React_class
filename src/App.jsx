@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
 
 //main class files
 // import Hello from "./components/helloWorld";
@@ -23,26 +24,41 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import External from "./components/external";
 // import Button from "./components/button";
 // import ProductCard from "./components/productCard";
+
+//routing1
 import Index from "./components/index";
-import Home from "./components/home";
-import Contact from "./components/contact";
-import About from "./components/about";
+// import Home from "./components/home";
+// import Contact from "./components/contact";
+// import About from "./components/about";
+// import NavLink1 from "./components/navLink";
+
+//routing2
+import User from "./routing2/user";
 
 //Assignments
 // import ShopApp from "./Assignments/shopApp";
+
+const Home = lazy(() => import("./components/home"));
+const About = lazy(() => import("./components/about"));
+const Contact = lazy(() => import("./components/contact"));
 
 function App() {
   return (
     <div className="App">
       <h1>This is a app file</h1>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
+      <Suspense fallback={<h3>Loading......</h3>}>
+        <BrowserRouter>
+          <Routes>
+            {/* <NavLink1 /> */}
+            <Route path="/" element={<Index />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/users/:id" element={<User />} />
+          </Routes>
+        </BrowserRouter>
+      </Suspense>
+
       {/* Class work */}
       {/* <FirstComponent name="Gagan" />
       <FirstComponent name="Singh" />
