@@ -41,6 +41,10 @@ import Ref from "./Hooks1/Ref";
 import AcessingDom from "./Hooks1/AcessingDom";
 import Track from "./Hooks1/track";
 import Battery from "./Hooks1/Battery";
+import Counter from "./Hooks1/Reducer";
+import Memo from "./Hooks1/Memo";
+import Parent from "./Hooks1/Callback";
+import CounterComponent from "./Hooks1/CounterComp";
 
 //Assignments
 // import ShopApp from "./Assignments/shopApp";
@@ -58,6 +62,10 @@ function App() {
       <AcessingDom />
       <Track />
       <Battery />
+      <Counter />
+      <Memo />
+      <Parent />
+      <CounterComponent />
 
       {/* <h1>This is a app file</h1>
       <Suspense fallback={<h3>Loading......</h3>}>
